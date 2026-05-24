@@ -1,17 +1,17 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  title:        "Collatz Conjecture Accelerator"      # Project title
+  author:       "Sahil Rajwar"      # Your name
+  discord:      "0xhilsa"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "Hardware accelerator for the Collatz conjecture"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  top_module:  "tt_um_collatz_0xhilSa"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
@@ -21,32 +21,30 @@ project:
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
-pinout:
+ pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
-
+  ui[0]: "data bit 0"
+  ui[1]: "data bit 1"
+  ui[2]: "data bit 2"
+  ui[3]: "data bit 3"
+  ui[4]: "data bit 4"
+  ui[5]: "data bit 5"
+  ui[6]: "data bit 6"
+  ui[7]: "data bit 7"
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
-
+  uo[0]: "stopping time bit 0 (LSB)"
+  uo[1]: "stopping time bit 1"
+  uo[2]: "stopping time bit 2"
+  uo[3]: "stopping time bit 3"
+  uo[4]: "stopping time bit 4"
+  uo[5]: "stopping time bit 5"
+  uo[6]: "stopping time bit 6"
+  uo[7]: "stopping time bit 7 (MSB)"
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
+  uio[0]: "load_high: 0=load low byte of n, 1=load high byte of n (input)"
+  uio[1]: "start: pulse high for 1 cycle to begin iteration (input)"
+  uio[2]: "done: goes high when stopping time is ready (output)"
+  uio[3]: "overflow: high if trajectory exceeded 24-bit register (output)"
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""
