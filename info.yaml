@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Collatz Conjecture Accelerator"
+  title:        "Collatz Sequence Accelerator"
   author:       "Sahil Rajwar"
   discord:      "0xhilsa"
   description:  "Hardware accelerator for the Collatz conjecture"
