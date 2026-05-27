@@ -34,6 +34,3 @@ Known values for verification:
 - n=27  → 111 steps (famous long trajectory, peaks at 9232)
 - n=871 → 178 steps
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
