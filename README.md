@@ -5,6 +5,8 @@
 ![](../../workflows/test/badge.svg)
 ![](../../workflows/fpga/badge.svg)
 
+![image](./docs/gds_render.png)
+
 A hardware accelerator designed to compute the Collatz sequence for a given positive integer using RTL design principles.
 
 ---
@@ -59,7 +61,7 @@ n = 27
 The sequence begins as:
 
 ```text
-27 → 82 → 41 → 124 → 62 → 31 → ...
+27 → 82 → 41 → 124 → 62 → 31 → ... → 4 → 2 → 1
 ```
 
 and eventually reaches:
